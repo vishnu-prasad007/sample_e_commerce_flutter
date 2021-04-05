@@ -9,7 +9,7 @@ class LoginScreen extends StatelessWidget {
         body: Center(
           child: Container(
             padding: EdgeInsets.only(left: 8.0, right: 8.0),
-            height: 315,
+            height: 350,
             child: Card(
               shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(6.0)),
@@ -56,7 +56,11 @@ class LoginScreen extends StatelessWidget {
                         backgroundColor: MaterialStateProperty.all<Color>(
                             BrandColors.tailColorDark),
                       ),
-                    )
+                    ),
+                     SizedBox(
+                      height: 18.0,
+                    ),
+                    Text('Forgot password ?',style: TextStyle(color: Colors.grey,decoration: TextDecoration.underline),)
                   ],
                 ),
               ),
