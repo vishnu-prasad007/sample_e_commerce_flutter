@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:sample_e_commerce_flutter/colors.dart';
+import 'package:sample_e_commerce_flutter/screens/home_screen.dart';
 
 class LoginScreen extends StatelessWidget {
   @override
@@ -49,7 +50,9 @@ class LoginScreen extends StatelessWidget {
                       height: 18.0,
                     ),
                     ElevatedButton.icon(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.push(context, MaterialPageRoute(builder: (_)=>HomeScreen()));
+                      },
                       icon: Icon(Icons.login),
                       label: Text('Login'),
                       style: ButtonStyle(
