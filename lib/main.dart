@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:sample_e_commerce_flutter/screens/home_screen.dart';
 import 'package:sample_e_commerce_flutter/screens/login_screen.dart';
 
 void main() {

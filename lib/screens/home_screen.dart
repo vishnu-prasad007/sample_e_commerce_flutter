@@ -1,6 +1,7 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:sample_e_commerce_flutter/colors.dart';
+import 'package:sample_e_commerce_flutter/screens/brands_screen.dart';
 
 class HomeScreen extends StatelessWidget {
   @override
@@ -59,7 +60,16 @@ class HomeScreen extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           Text('Brands'),
-                          TextButton(onPressed: () {}, child: Text('View all',style: TextStyle(color: BrandColors.tailColorDark)))
+                          TextButton(
+                              onPressed: () {
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (_) => BrandsScreen()));
+                              },
+                              child: Text('View all',
+                                  style: TextStyle(
+                                      color: BrandColors.tailColorDark)))
                         ],
                       ),
                     )
@@ -87,17 +97,20 @@ class HomeScreen extends StatelessWidget {
               ),
               SliverList(
                   delegate: SliverChildListDelegate([
-                     SizedBox(
-                        height: 18.0,
-                      ),
+                SizedBox(
+                  height: 18.0,
+                ),
                 Padding(
                   padding: const EdgeInsets.only(left: 16.0, right: 16.0),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                     
                       Text('Trending Products'),
-                      TextButton(onPressed: () {}, child: Text('View all',style: TextStyle(color: BrandColors.tailColorDark)))
+                      TextButton(
+                          onPressed: () {},
+                          child: Text('View all',
+                              style:
+                                  TextStyle(color: BrandColors.tailColorDark)))
                     ],
                   ),
                 ),
@@ -123,16 +136,21 @@ class HomeScreen extends StatelessWidget {
               ),
               SliverList(
                   delegate: SliverChildListDelegate([
-                     SizedBox(
-                        height: 18.0,
-                      ),
+                SizedBox(
+                  height: 18.0,
+                ),
                 Padding(
                   padding: const EdgeInsets.only(left: 16.0, right: 16.0),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Text('Featured Products'),
-                      TextButton(onPressed: () {}, child: Text('View all',style: TextStyle(color: BrandColors.tailColorDark),))
+                      TextButton(
+                          onPressed: () {},
+                          child: Text(
+                            'View all',
+                            style: TextStyle(color: BrandColors.tailColorDark),
+                          ))
                     ],
                   ),
                 ),
@@ -215,7 +233,6 @@ final List<String> imgList = [
   'https://images.unsplash.com/flagged/photo-1589173577838-123503190c43?ixid=MXwxMjA3fDB8MHxzZWFyY2h8OTB8fHdvbW9uJTIwZHJlc3N8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=60',
   'https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1050&q=80',
   'https://images.unsplash.com/photo-1608248543803-ba4f8c70ae0b?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=950&q=80',
-
 ];
 
 final List<Widget> imageSliders = imgList
