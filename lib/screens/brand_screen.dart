@@ -20,7 +20,10 @@ class BrandScreen extends StatelessWidget {
             SizedBox(
               height: 10.0,
             ),
-            Image.network(brand.brandLogoLink),
+            Padding(
+              padding: const EdgeInsets.all(24.0),
+              child: Image.network(brand.brandLogoLink),
+            ),
             SizedBox(
               height: 16.0,
             ),

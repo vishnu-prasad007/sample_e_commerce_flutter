@@ -2,6 +2,7 @@ import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:sample_e_commerce_flutter/colors.dart';
 import 'package:sample_e_commerce_flutter/screens/brands_screen.dart';
+import 'package:sample_e_commerce_flutter/screens/products_screen.dart';
 
 class HomeScreen extends StatelessWidget {
   @override
@@ -107,7 +108,12 @@ class HomeScreen extends StatelessWidget {
                     children: [
                       Text('Trending Products'),
                       TextButton(
-                          onPressed: () {},
+                          onPressed: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (_) => ProductsScreen()));
+                          },
                           child: Text('View all',
                               style:
                                   TextStyle(color: BrandColors.tailColorDark)))
