@@ -108,12 +108,7 @@ class HomeScreen extends StatelessWidget {
                     children: [
                       Text('Trending Products'),
                       TextButton(
-                          onPressed: () {
-                            Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (_) => ProductsScreen()));
-                          },
+                          onPressed: () {},
                           child: Text('View all',
                               style:
                                   TextStyle(color: BrandColors.tailColorDark)))
@@ -130,6 +125,12 @@ class HomeScreen extends StatelessWidget {
                   return Padding(
                     padding: const EdgeInsets.only(left: 16.0, right: 16.0),
                     child: InkWell(
+                      onTap: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (_) => ProductsScreen()));
+                      },
                       child: Card(
                         child: Image.network(
                           trendingProducts[index],
