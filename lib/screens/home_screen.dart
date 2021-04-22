@@ -2,6 +2,7 @@ import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:sample_e_commerce_flutter/colors.dart';
 import 'package:sample_e_commerce_flutter/screens/brands_screen.dart';
+import 'package:sample_e_commerce_flutter/screens/dashboard_screen.dart';
 import 'package:sample_e_commerce_flutter/screens/products_screen.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -28,6 +29,14 @@ class HomeScreen extends StatelessWidget {
               ListTile(
                 title: Text('Home'),
                 leading: Icon(Icons.home),
+              ),
+              ListTile(
+                onTap: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (_) => DashBoardScreen()));
+                },
+                title: Text('Dashboard'),
+                leading: Icon(Icons.dashboard),
               ),
               ListTile(
                 title: Text('Brand'),
